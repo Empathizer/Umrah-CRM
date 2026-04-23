@@ -1,0 +1,97 @@
+/* ── Voucher Tabs ── */
+.voucher-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.voucher-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  color: #6b7280;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.voucher-tab:hover {
+  border-color: #1d4ed8;
+  color: #1d4ed8;
+}
+
+.voucher-tab.active {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ── Voucher Form ── */
+.voucher-form {
+  background: #fff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.voucher-section {
+  padding: 24px;
+}
+
+.voucher-section-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0a1628;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Footer ── */
+.voucher-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: #f8fafc;
+  border-top: 1.5px solid #e2e8f0;
+}
+
+.voucher-nav-btns {
+  display: flex;
+  gap: 10px;
+}
+
+/* ── Create Voucher Button ── */
+.btn-create-voucher {
+  background: #22c55e;
+  color: #fff;
+  border: none;
+  padding: 11px 28px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+.btn-create-voucher:hover {
+  background: #16a34a;
+  transform: translateY(-1px);
+}
+
+.btn-create-voucher:active {
+  transform: translateY(0);
+}

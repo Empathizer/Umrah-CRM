@@ -1,0 +1,10 @@
+/* Groups / Packages Module */
+.package-type-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: #2a1e3e;
+  color: #8b5cf6;
+}

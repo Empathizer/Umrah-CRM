@@ -1,0 +1,229 @@
+.dashboard-page {
+  padding: 4px 0;
+}
+
+/* ── Section Title ── */
+.dash-section-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1d4ed8;
+  margin: 24px 0 12px;
+  padding-left: 4px;
+  border-left: 3px solid #1d4ed8;
+  padding-left: 10px;
+}
+
+/* ── Row 1: Stat Cards ── */
+.stat-cards-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.stat-card {
+  position: relative;
+  height: 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid #000;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10, 22, 40, 0.75) 0%, rgba(29, 78, 216, 0.6) 100%);
+}
+
+.stat-card-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+}
+
+.stat-icon {
+  font-size: 1.8rem;
+}
+
+.stat-value {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.stat-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* ── Info Cards Row ── */
+.info-cards-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.info-card {
+  background: #fff;
+  border-radius: 10px;
+  border: 1.5px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.info-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.makkah-card .info-card-header  { background: #0a1628; }
+.ksa-card .info-card-header     { background: #1d4ed8; }
+.madinah-card .info-card-header { background: #1e3a5f; }
+.conversion-card .info-card-header { background: #22c55e; color: #fff; }
+
+.info-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 16px;
+  gap: 8px;
+}
+
+.day-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.day-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.day-value {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #0a1628;
+  line-height: 1;
+}
+
+.day-divider {
+  width: 1px;
+  height: 40px;
+  background: #e2e8f0;
+}
+
+/* ── Conversion Card ── */
+.conversion-card {
+  grid-column: span 2;
+}
+
+.conversion-rate-display {
+  text-align: center;
+  padding: 10px 16px 4px;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.conversion-rate-display strong {
+  color: #1d4ed8;
+  font-size: 1.1rem;
+}
+
+.conversion-inputs {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 10px 16px 16px;
+}
+
+.conv-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.conv-field label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.conv-field input {
+  padding: 8px 10px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #0a1628;
+  outline: none;
+  background: #f8fafc;
+  transition: border-color 0.2s;
+}
+
+.conv-field input:focus {
+  border-color: #1d4ed8;
+}
+
+.conv-equals {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  padding-bottom: 8px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .stat-cards-row,
+  .info-cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .conversion-card {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .stat-cards-row,
+  .info-cards-row {
+    grid-template-columns: 1fr;
+  }
+  .conversion-card {
+    grid-column: span 1;
+  }
+}

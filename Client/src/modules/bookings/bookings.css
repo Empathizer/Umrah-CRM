@@ -1,0 +1,19 @@
+/* Bookings Module */
+.booking-status {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.booking-status.confirmed { color: #22c55e; }
+.booking-status.pending   { color: #f59e0b; }
+.booking-status.cancelled { color: #ef4444; }
+
+.balance-due {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.balance-clear {
+  color: #22c55e;
+  font-weight: 600;
+}

@@ -1,0 +1,8 @@
+/* Customer Module */
+.customer-status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}

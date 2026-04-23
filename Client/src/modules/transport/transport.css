@@ -1,0 +1,10 @@
+/* Transport Module */
+.vehicle-type-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: #1e2e1e;
+  color: #22c55e;
+}

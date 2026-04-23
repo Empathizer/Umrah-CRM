@@ -1,0 +1,10 @@
+/* Hotels Module */
+.hotel-category {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: #1e2a3e;
+  color: #3b82f6;
+}

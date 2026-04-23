@@ -1,0 +1,9 @@
+/* Care Off Module */
+.commission-badge {
+  background: #1e3a1e;
+  color: #22c55e;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}

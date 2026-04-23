@@ -1,0 +1,154 @@
+/* ── Sidebar Shell ── */
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: #0a1628;
+  border-right: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transition: width 0.25s ease;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+/* ── Header ── */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 14px;
+  border-bottom: 1px solid #1e3a5f;
+  min-height: 60px;
+}
+
+.sidebar-brand {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.sidebar-toggle {
+  background: #1e3a5f;
+  border: none;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+.sidebar-toggle:hover { background: #2563eb; }
+
+/* ── Nav ── */
+.sidebar-nav {
+  padding: 10px 0;
+  flex: 1;
+}
+
+/* ── Module Button ── */
+.sidebar-module-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: none;
+  border: none;
+  color: #cbd5e1;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-align: left;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-module-btn:hover {
+  background: #1e3a5f;
+  color: #fff;
+}
+
+.sidebar-module-btn.active {
+  background: #1d4ed8;
+  color: #fff;
+}
+
+.module-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+}
+
+.module-label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.module-arrow {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* ── Submenu ── */
+.sidebar-submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #060e1c;
+  border-left: 3px solid #1d4ed8;
+  margin-left: 14px;
+}
+
+.submenu-link {
+  display: block;
+  padding: 8px 16px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.submenu-link:hover {
+  background: #1e3a5f;
+  color: #fff;
+}
+
+.submenu-link.active {
+  color: #22c55e;
+  font-weight: 600;
+  background: #0f1f0f;
+}
+
+/* ── Scrollbar ── */
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-track { background: #0a1628; }
+.sidebar::-webkit-scrollbar-thumb { background: #1e3a5f; border-radius: 2px; }
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    z-index: 200;
+    height: 100vh;
+  }
+  .sidebar.collapsed {
+    width: 0;
+    border: none;
+    overflow: hidden;
+  }
+}
